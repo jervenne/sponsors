@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head> // Test Test
+    <head>
         <meta charset="utf-8">
 
         <title>Eventory</title>
