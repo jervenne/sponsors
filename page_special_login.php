@@ -15,7 +15,7 @@
 
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="shortcut icon" href="img/shake_hand.ico">
         <link rel="apple-touch-icon" href="img/icon57.png" sizes="57x57">
         <link rel="apple-touch-icon" href="img/icon72.png" sizes="72x72">
         <link rel="apple-touch-icon" href="img/icon76.png" sizes="76x76">
@@ -50,16 +50,24 @@
 
     <!-- Body -->
     <body>
-        <!-- Header -->
-        <header class="navbar navbar-default navbar-fixed-top">
-            <!-- Header Brand -->
-            <a href="page_special_login.php" class="navbar-brand">
-                <img src="img/template/drop.png" alt="FreshUI">
-                <span><?php echo $template['name']; ?></span>
-            </a>
-            <!-- END Header Brand -->
-        </header>
-        <!-- END Header -->
+        <!-- Main Menu -->
+                <div class="collapse navbar-collapse navbar-right navbar-menu-collapse">
+                    <ul id="landing-menu-links" class="nav navbar-nav">
+                        <li>
+                            <a href="#">Welcome</a>
+                        </li>
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#pricing">About</a>
+                        </li>
+                        <li>
+                            <a href="#about">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END Main Menu -->
 
         <!-- Login Container -->
         <div id="login-container">
