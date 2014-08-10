@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Sponsors.SG</title>
+        <title>Eventory</title>
 
         <meta name="description" content="<?php echo $template['description'] ?>">
         <meta name="author" content="<?php echo $template['author'] ?>">
