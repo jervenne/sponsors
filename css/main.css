@@ -896,6 +896,7 @@ a[data-toggle="lightbox-image"]:hover img {
 }
 
 .landing-intro .jumbotron {
+	color: black;
     background: none;
 }
 
