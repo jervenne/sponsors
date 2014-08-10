@@ -115,53 +115,37 @@
                 <div class="row gutter30 landing-features">
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-fire animation-fadeIn"></i></p>
-                        <h3 class="features-title">Bootstrap Powered</h3>
-                        <p class="features-text"><a href="http://getbootstrap.com/">Bootstrap</a> is a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. <?php echo $template['name']; ?> was built on top, extending it to a large degree.</p>
+                        <h3 class="features-title">Better Chances</h3>
+                        <p class="features-text">Our matching system brings a larger number of interested sponsors to your events</p>
                     </div>
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-iphone_shake animation-fadeIn"></i></p>
-                        <h3 class="features-title">Fully Responsive</h3>
-                        <p class="features-text">The User Interface will adjust to any screen size. It will look great on mobile devices and on desktops at the same time. No need to worry about the UI, just stay focused on the development.</p>
+                        <h3 class="features-title">Save Time</h3>
+                        <p class="features-text">You don't have to actively look for sponsors, we do it for you</p>
                     </div>
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="fa fa-check-circle-o animation-fadeIn"></i></p>
-                        <h3 class="features-title">Retina Ready</h3>
-                        <p class="features-text">It will look crispy clear on high resolution screens and at the same time it will serve your high quality images as required.</p>
+                        <h3 class="features-title">Effort-less</h3>
+                        <p class="features-text">Reach out to many sponsors by introducing your event just once</p>
                     </div>
                 </div>
                 <div class="row gutter30 landing-features">
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-globe_af animation-fadeIn"></i></p>
-                        <h3 class="features-title">Cross Browser Support</h3>
-                        <p class="features-text"><?php echo $template['name']; ?> will play nice with all modern browsers such as Chrome, Firefox, Safari, Opera and the latest versions of Internet Explorer. In fact, it supports even IE8, so don't worry about losing any customers who stuck with it.</p>
+                        <h3 class="features-title">Two Way Street</h3>
+                        <p class="features-text">Sponsors are actively looking for you too</p>
                     </div>
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-flash animation-fadeIn"></i></p>
-                        <h3 class="features-title">Fast & Lightweight</h3>
-                        <p class="features-text"><?php echo $template['name']; ?> is not bloated with Jquery plugins and created to be as fast and lightweight as possible. Also, striping out the features you won't use, it is just a matter of seconds.</p>
+                        <h3 class="features-title">Less Worries</h3>
+                        <p class="features-text">Let us bring sponsors to your doorsteps while you focus on other aspects of your event</p>
                     </div>
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-clock animation-fadeIn"></i></p>
-                        <h3 class="features-title">Saves you time</h3>
-                        <p class="features-text">Time is of vital importance. <?php echo $template['name']; ?> will save you hundreds of hours of extra development. Start right away coding your functionality and see your project come to life months sooner.</p>
+                        <h3 class="features-title">Free</h3>
+                        <p class="features-text">And the best of all, we offer this service free of charge</p>
                     </div>
                 </div>
-                <div class="row gutter30 landing-features">
-                    <div class="col-sm-4">
-                        <p class="features-icon"><i class="gi gi-claw_hammer animation-fadeIn"></i></p>
-                        <h3 class="features-title">PHP &amp; HTML Versions</h3>
-                        <p class="features-text">You will get 2 versions, so you can choose the one that fits you best. If you don't prefer PHP and work with other server-side scripting languages such as Ruby, ASP or Python, the HTML version is the best fit.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="features-icon"><i class="gi gi-log_book animation-fadeIn"></i></p>
-                        <h3 class="features-title">Documentation Included</h3>
-                        <p class="features-text"><?php echo $template['name']; ?> comes packed with a great documentation which covers all the basics to get you familiar with template's structure and files. It is the best way to get started.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="features-icon"><i class="fa fa-code animation-fadeIn"></i></p>
-                        <h3 class="features-title">Clean &amp; Commented Code</h3>
-                        <p class="features-text">The code is created with the developer in mind. It is clean, easy to follow, easy to replicate and at the same time well commented, so that you never feel lost.</p>
-                    </div>
                 </div>
             </div>
         </div>
