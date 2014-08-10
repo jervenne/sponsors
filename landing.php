@@ -99,12 +99,7 @@
         <div class="landing-intro">
             <div class="container">
                 <div class="jumbotron">
-                    <h1 class="animation-pullDown">Fresh<strong>UI</strong></h1>
-                    <p class="animation-fadeIn">A professional & flexible admin template!</p>
-                    <p class="animation-fadeIn">
-                        <a href="index.php" class="btn btn-primary btn-lg">Live Preview</a>
-                        <a href="http://goo.gl/CJE2tn" class="btn btn-success btn-lg">Purchase $18</a>
-                    </p>
+                    <h1 class="animation-pullDown">Eventory <strong>v1.0</strong></h1>
                 </div>
                 <p>
                     <i class="fa fa-angle-double-down fa-3x animation-floating"></i>
