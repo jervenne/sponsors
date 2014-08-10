@@ -10,7 +10,7 @@
 
 /* Template variables */
 $template = array(
-    'name'          => 'FreshUI',
+    'name'          => 'Eventory V1.0',
     'version'       => '1.5',
     'author'        => 'pixelcave',
     'title'         => 'FreshUI - Premium Web App and Admin Template',
