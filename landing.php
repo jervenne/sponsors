@@ -15,7 +15,7 @@
 
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="shortcut icon" href="img/shake_hand.ico">
         <link rel="apple-touch-icon" href="img/icon57.png" sizes="57x57">
         <link rel="apple-touch-icon" href="img/icon72.png" sizes="72x72">
         <link rel="apple-touch-icon" href="img/icon76.png" sizes="76x76">
@@ -83,10 +83,10 @@
                             <a href="#features">Features</a>
                         </li>
                         <li>
-                            <a href="#pricing">Pricing</a>
+                            <a href="#pricing">About</a>
                         </li>
                         <li>
-                            <a href="#about">About</a>
+                            <a href="#about">Contact Us</a>
                         </li>
                     </ul>
                 </div>
