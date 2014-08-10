@@ -95,7 +95,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input type="text" id="login-email" name="login-email" class="form-control input-lg" placeholder="Email">
+                            <input type="text" id="login-username" name="login-username" class="form-control input-lg" placeholder="Username">
                         </div>
                     </div>
                     <div class="form-group">
