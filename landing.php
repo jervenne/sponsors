@@ -133,7 +133,7 @@
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-globe_af animation-fadeIn"></i></p>
                         <h3 class="features-title">Two Way Street</h3>
-                        <p class="features-text">Sponsors are actively looking for you too</p>
+                        <p class="features-text">You are not the one looking for sponsors alone, sponsors are actively looking for you too</p>
                     </div>
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-flash animation-fadeIn"></i></p>
@@ -143,7 +143,7 @@
                     <div class="col-sm-4">
                         <p class="features-icon"><i class="gi gi-clock animation-fadeIn"></i></p>
                         <h3 class="features-title">Free</h3>
-                        <p class="features-text">And the best of all, we offer this service free of charge</p>
+                        <p class="features-text">And the best of all, we offer this matching-up service free of charge</p>
                     </div>
                 </div>
                 </div>
