@@ -58,9 +58,18 @@
                 <!-- Login Title -->
                 <div class="block-header">
                     <div class="header-section">
-                        <h1 class="text-center">Get Started!</h1>
+                        <h1>Get Started!</h1>
                     </div>
                 </div>
-        <!-- END Login Title -->
+				<!-- END Login Title -->
+		
+		<!-- Search Container -->
+			<!-- Pre-search -->
+				<h1><small>Find an organisation:</small></h1>
+			
+			<br><form>
+                <input type="text" placeholder="Search..." required>
+                <input type="button" value="Search">
+			</br></form>
     </body>
 </html>
