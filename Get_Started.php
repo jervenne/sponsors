@@ -65,11 +65,18 @@
 		
 		<!-- Search Container -->
 			<!-- Pre-search -->
-				<h1><small>Find an organisation:</small></h1>
+				<h4>Find an organisation:</h4>
+			<!-- End of Pre-search -->
 			
+			<!-- Search Bar -->
 			<br><form>
                 <input type="text" placeholder="Search..." required>
                 <input type="button" value="Search">
 			</br></form>
+			<!-- End of Search Bar -->
+			
+			<!-- Post-search -->
+			<br><a href='get_started.view'>Create</a></li></br>
+			<!-- End of Post-search -->
     </body>
 </html>
