@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Eventory</title>
+        <title>Eventory v0.1</title>
 
         <meta name="description" content="<?php echo $template['description'] ?>">
         <meta name="author" content="<?php echo $template['author'] ?>">

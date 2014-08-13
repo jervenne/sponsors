@@ -13,7 +13,7 @@ $template = array(
     'name'          => 'Eventory v1.0',
     'version'       => '1.5',
     'author'        => 'pixelcave',
-    'title'         => 'FreshUI - Premium Web App and Admin Template',
+    'title'         => 'Eventory v0.1',
     'description'   => 'FreshUI is a Premium Web App and Admin Template created by pixelcave and published on Themeforest.',
     // ''               empty to remove full width from the page (< 992px: 100%, > 992px: 95%, 1440px max width)
     // 'full-width'     for a full width page (100%, 1920px max width)

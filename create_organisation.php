@@ -70,32 +70,28 @@
                 </div>
                 <!-- END Main Menu -->
 		
-        <!-- Login Container -->
+        <!-- Heading Container -->
         <div id="login-container">
             <!-- Page Content -->
             <div id="page-content" class="block remove-margin">
                 <!-- Login Title -->
                 <div class="block-header">
                     <div class="header-section">
-                        <h1>Get Started!</h1>
+                        <h1>Create Organisation</h1>
                     </div>
                 </div>
-				<!-- END Login Title -->
+		<!-- END Heading Container -->
 		
-		<!-- Search Container -->
-			<!-- Pre-search -->
-				<h4>Find an organisation:</h4>
-			<!-- End of Pre-search -->
+		<!-- Check Box Container -->
+			<form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
+			<input type="checkbox" name="option1" value="Milk" checked>Sponsor<br>
+			<input type="checkbox" name="option2" value="Butter">Event Organiser<br>
+			<br>
+			</form>
+		<!-- End of Check Box Container -->	
 			
-			<!-- Search Bar -->
-			<br><form>
-                <input type="text" placeholder="Search..." required>
-                <input type="button" value="Search">
-			</br></form>
-			<!-- End of Search Bar -->
-			
-			<!-- Post-search -->
-			<br><a href='create_organisation.php'>Create Organisation</a></li></br>
-			<!-- End of Post-search -->
+		<!-- Post-Check Box Container -->
+			<br><a href='organisation_info.php'><button type="button">Create</button></br>
+		<!-- End of Post-Check Box Container --> 
     </body>
 </html>
