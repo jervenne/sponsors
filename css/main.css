@@ -747,6 +747,7 @@ a.header-title-link {
 /* Float content in text */
 .content-text .pull-left {
     margin: 0 20px 20px 0;
+	width: 150px;
 }
 
 .content-text .pull-right {
