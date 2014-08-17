@@ -83,15 +83,16 @@
 		<!-- END Heading Container -->
 		
 		<!-- Check Box Container -->
-			<form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
-			<input type="checkbox" name="option1" value="Milk" checked>Sponsor<br>
-			<input type="checkbox" name="option2" value="Butter">Event Organiser<br>
+			<form name="myform" action="organisation_info.php" method="POST">
+			Name Of Organisation:<br>
+			<input type="text" name="name" value="" /><br><br>
+			<input type="checkbox" name="option1" value="Sponsor" checked>Sponsor<br>
+			<input type="checkbox" name="option2" value="Event Organiser">Event Organiser<br>
 			<br>
+			
+			<input type="submit" value=" Create " />
+			</br>
 			</form>
 		<!-- End of Check Box Container -->	
-			
-		<!-- Post-Check Box Container -->
-			<br><a href='organisation_info.php'><button type="button">Create</button></br>
-		<!-- End of Post-Check Box Container --> 
     </body>
 </html>
