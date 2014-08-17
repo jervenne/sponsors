@@ -56,54 +56,42 @@ $primary_nav = array(
         'url'   => 'header'
     ),
     array(
-        'name'  => 'Dashboard',
+        'name'  => 'Home Page',
         'url'   => 'index.php',
         'icon'  => 'fa fa-coffee'
     ),
     array(
-        'name'  => 'User Interface',
+        'name'  => 'Events',
         'url'   => 'header',
     ),
     array(
-        'name'  => 'Elements',
+        'name'  => 'Members',
         'icon'  => 'fa fa-rocket',
         'sub'   => array(
             array(
-                'name'  => 'Typography',
+                'name'  => 'View Members',
                 'url'   => 'page_elements_typography.php'
             ),
             array(
-                'name'  => 'Blocks - Grid',
+                'name'  => 'Add Members',
                 'url'   => 'page_elements_blocks_grid.php'
             ),
-            array(
-                'name'  => 'Navigation - Extras',
-                'url'   => 'page_elements_navigation_extras.php'
-            ),
-            array(
-                'name'  => 'Buttons - Dropdowns',
-                'url'   => 'page_elements_buttons_dropdowns.php'
-            ),
-            array(
-                'name'  => 'Progress - Loading',
-                'url'   => 'page_elements_progress_loading.php'
-            )
         )
     ),
     array(
-        'name'  => 'Tables',
+        'name'  => 'My Event',
         'icon'  => 'fa fa-th',
         'sub'   => array(
             array(
-                'name'  => 'Styles',
+                'name'  => 'View Events',
                 'url'   => 'page_tables_styles.php'
             ),
             array(
-                'name'  => 'Datatables',
+                'name'  => 'Edit Events',
                 'url'   => 'page_tables_datatables.php'
             ),
             array(
-                'name'  => 'Editable',
+                'name'  => 'Add New Event',
                 'url'   => 'page_tables_editable.php'
             )
         )
