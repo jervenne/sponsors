@@ -12,9 +12,9 @@
 $template = array(
     'name'          => 'Eventory v1.0',
     'version'       => '1.5',
-    'author'        => 'pixelcave',
+    'author'        => 'Eventory',
     'title'         => 'Eventory v0.1',
-    'description'   => 'FreshUI is a Premium Web App and Admin Template created by pixelcave and published on Themeforest.',
+    'description'   => 'Easiest way to find sponsors for your event',
     // ''               empty to remove full width from the page (< 992px: 100%, > 992px: 95%, 1440px max width)
     // 'full-width'     for a full width page (100%, 1920px max width)
     'page'          => '',
@@ -26,7 +26,7 @@ $template = array(
     'header'        => 'navbar-fixed-top',
     // ''                  left sidebar will open only from the top left toggle button (better website performance)
     // 'enable-hover'      will make a small portion of left sidebar visible, so that it can be opened with a mouse hover (> 1200px) (may affect website performance)
-    'sidebar_left'  => 'enable-hover',
+    'sidebar_left'  => '',
     // ''                  right sidebar will open only from the top right toggle button (better website performance)
     // 'enable-hover'      will make a small portion of right sidebar visible, so that it can be opened with a mouse hover (> 1200px) (may affect website performance)
     'sidebar_right'  => '',
