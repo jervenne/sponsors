@@ -239,10 +239,7 @@
 
 
                 <!-- Header Brand -->
-                <a href="index.php" class="navbar-brand">
-                    <img src="img/template/drop.png" alt="FreshUI">
-                    <span><?php echo $template['name']; ?></span>
-                </a>
+                Eventory Logo
                 <!-- END Header Brand -->
             </header>
             <!-- END Header -->

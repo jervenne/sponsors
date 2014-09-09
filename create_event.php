@@ -1,6 +1,41 @@
-<?php include 'inc/config.php'; // Configuration php file ?>
-<?php include 'inc/header.php';    // Meta data and header   ?>
+<?php 
+    include 'inc/config.php'; 
+    include 'inc/header.php';    
+  //  require_once("ajax_table.class.php");
+  //  $obj = new ajax_table();
+  //  $records = $obj->getRecords();
+?>
+ <script>
+     // Column names must be identical to the actual column names in the database, if you dont want to reveal the column names, you can map them with the different names at the server side.
+     var columns = new Array("fname","lname","tech","address");
+     var placeholder = new Array("Enter First Name","Enter Last Name","Enter Technology","Enter Address");
+     var inputType = new Array("text","text","text","textarea");
+     var table = "presenceTable";
+     
+     // Set button class names 
+     var savebutton = "ajaxSave";
+     var deletebutton = "ajaxDelete";
+     var editbutton = "ajaxEdit";
+     var updatebutton = "ajaxUpdate";
+     var cancelbutton = "cancel";
+     
+     var saveImage = "images/save.png"
+     var editImage = "images/edit.png"
+     var deleteImage = "images/remove.png"
+     var cancelImage = "images/back.png"
+     var updateImage = "images/save.png"
 
+     // Set highlight animation delay (higher the value longer will be the animation)
+     var saveAnimationDelay = 3000; 
+     var deleteAnimationDelay = 1000;
+      
+     // 2 effects available available 1) slide 2) flash
+     var effect = "flash"; 
+  
+  </script>
+  <script src="js/vendor/jquery-1.11.0.min.js"></script>   
+  <script src="js/jquery-ui.js"></script>   
+  <script src="js/script.js"></script>  
 <!-- Page content -->
 <div id="page-content" class="block">
     <!-- Wizard Header -->
@@ -20,7 +55,7 @@
         <!-- END Advanced Wizard Title -->
 
         <!-- Advanced Wizard Content -->
-        <form id="advanced-wizard" action="page_forms_wizard.php" method="post" class="form-horizontal">
+        <form id="advanced-wizard" action="add_event.php" method="post" class="form-horizontal" enctype="multipart/form-data">
             <!-- First Step -->
             <div id="advanced-first" class="step">
                 <!-- Step Info -->
@@ -35,7 +70,7 @@
                     <label class="control-label col-md-2" for="event_title">Event Title *</label>
                     <div class="col-md-3">
                         <div class="input-group">
-                            <input type="text" id="event_title" name="event_title" class="form-control" required>
+                            <input type="text" id="event_title" name="event_title" class="form-control">
                             <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
                        
                         </div>
@@ -85,8 +120,8 @@
                     <label class="control-label col-md-2" for="logo">Estimated Turnout *</label>
                     <div class="col-md-3">
                         <div class="input-group">
-                            <input type="text" id="turnout" name="turnout" class="form-control" required>
-                            <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                            <input type="text" id="turnout" name="turnout" class="form-control">
+                            <span class="input-group-addon"><i class="fa fa-asterisk fa-fw"></i></span>
                         </div>
                     </div>
                 </div>
@@ -115,7 +150,7 @@
                     <div class="col-md-3">
                         <div class="input-group">
                             <label class="switch switch-primary"><input type="checkbox" id="switch"><span></span></label>
-                                <div class="social">
+                                <div class="social input-group">
                                     <label class ="" for="social" id="facebook_title" style="display:none;"><i class="fa fa-facebook-square"></i> facebook.com/</label>
                                     <input type="text" id="facebook" name="facebook" class="form-control" style="display:none;">
                                 </div>
@@ -145,32 +180,50 @@
                 <div class="wizard-steps">
                     <div class="row">
                         <div class="col-xs-6 text-center done">1. Account <i class="fa fa-check"></i></div>
-                        <div class="col-xs-6 text-center active">2. Info</div>
+                        <div class="col-xs-6 text-center active">2. Sponsorship Options</div>
                     </div>
                 </div>
                 <!-- END Step Info -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="example-advanced-bio">Bio</label>
-                    <div class="col-md-10">
-                        <textarea id="example-advanced-bio" name="example-advanced-bio" rows="6" class="form-control"></textarea>
+                    <div class="table-responsive">
+                        <table class ="table presenceTable">
+                            <thead>
+                                <tr>
+                                    <th>Type of Presence</th>
+                                    <th>Title</th>
+                                    <th>Sponsorship Amount</th>
+                                    <th>Slots</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <?
+                            if(count($records)){
+                             $i = 1;    
+                             foreach($records as $key=>$eachRecord){
+                            ?>
+                            <tr id="<?=$eachRecord['id'];?>">
+                                <td class="fname"><?=$eachRecord['fname'];?></td>
+                                <td class="lname"><?=$eachRecord['lname'];?></td>
+                                <td class="tech"><?=$eachRecord['tech'];?></td>
+                                <td class="tech"><?=$eachRecord['address'];?></td>
+
+                                <td>
+                                    <a href="javascript:;" id="<?=$eachRecord['id'];?>" class="ajaxEdit"><img src="" class="eimage"></a>
+                                    <a href="javascript:;" id="<?=$eachRecord['id'];?>" class="ajaxDelete"><img src="" class="dimage"></a>
+                                </td>
+                            </tr>
+                            <? }
+                            }
+                            ?>
+                        </table>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="example-advanced-newsletter">Newsletter</label>
+                 <div class="form-group">
+                    <label class="control-label col-md-2" for="example-advanced-newsletter"></label>
                     <div class="col-md-10">
                         <div class="checkbox">
-                            <label for="example-advanced-newsletter">
-                                <input type="checkbox" id="example-advanced-newsletter" name="example-advanced-newsletter">  Sign up
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-2"><a href="javascript:void(0)">Terms and Conditions</a></label>
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            <label for="val_terms">
-                                <input type="checkbox" id="val_terms" name="val_terms" value="1"> Accept
+                            <label for="no_presence">
+                                <input type="checkbox" id="no_presence" name="no_presence"> Or check here if you have no fixed presence to offer
                             </label>
                         </div>
                     </div>
@@ -199,45 +252,45 @@
 <script type="text/javascript">
 //<![CDATA[ 
 $(window).load(function(){
-$("#switch").click(function () {
-    if ($(this).prop('checked') === true) {
-        $('#facebook').show();
-        $('input[name=facebook]').prop('required',true);
-        $('#facebook_title').show();
-        $('input[name=facebook_title]').prop('required',true);
-        $('#facebook_event').show();
-        $('input[name=facebook_event]').prop('required',true);
-        $('#facebook_event_title').show();
-        $('input[name=facebook_event_title]').prop('required',true);
-        $('#twitter').show();
-        $('input[name=twitter]').prop('required',true);
-        $('#twitter_title').show();
-        $('input[name=twitter_title]').prop('required',true);
-        $('#instagram').show();
-        $('input[name=instagram]').prop('required',true);
-        $('#instagram_title').show();
-        $('input[name=instagram_title]').prop('required',true);
+    $("#switch").click(function () {
+        if ($(this).prop('checked') === true) {
+            $('#facebook').show();
+            $('#facebook_title').show();
+            $('#facebook_event').show();
+            $('#facebook_event_title').show();
+            $('#twitter').show();
+            $('#twitter_title').show();
+            $('#instagram').show();
+            $('#instagram_title').show();
 
-    } 
-    if ($(this).prop('checked') === false) {
-        $('#facebook').hide();
-        $('input[name=facebook]').prop('required',false);   
-        $('#facebook_title').hide();
-        $('input[name=facebook_title]').prop('required',false);   
-        $('#facebook_event').hide();
-        $('input[name=facebook_event]').prop('required',false);   
-        $('#facebook_event_title').hide();
-        $('input[name=facebook_event_title]').prop('required',false);
-        $('#twitter').hide();
-        $('input[name=twitter]').prop('required',false);   
-        $('#twitter_title').hide();
-        $('input[name=twitter_title]').prop('required',false); 
-        $('#instagram').hide();
-        $('input[name=instagram]').prop('required',false);   
-        $('#instagram_title').hide();
-        $('input[name=instagram_title]').prop('required',false);               
-    }
-});
+        } 
+        if ($(this).prop('checked') === false) {
+            $('#facebook').hide();
+            $('input[name=facebook]').prop('required',false);   
+            $('#facebook_title').hide();
+            $('input[name=facebook_title]').prop('required',false);   
+            $('#facebook_event').hide();
+            $('input[name=facebook_event]').prop('required',false);   
+            $('#facebook_event_title').hide();
+            $('input[name=facebook_event_title]').prop('required',false);
+            $('#twitter').hide();
+            $('input[name=twitter]').prop('required',false);   
+            $('#twitter_title').hide();
+            $('input[name=twitter_title]').prop('required',false); 
+            $('#instagram').hide();
+            $('input[name=instagram]').prop('required',false);   
+            $('#instagram_title').hide();
+            $('input[name=instagram_title]').prop('required',false);               
+        }
+    });
+    $("#no_presence").click(function () {
+        if ($(this).prop('checked') === true) {
+            $('.presenceTable').hide();
+        } 
+        if ($(this).prop('checked') === false) {
+            $('.presenceTable').show();
+        } 
+    });
 });//]]>  
 
 </script>
@@ -266,22 +319,10 @@ $("#switch").click(function () {
                     e.closest('.help-block').remove();
                 },
                 rules: {
-                    val_username: {
-                        required: true,
-                        minlength: 2
-                    },
-                    val_password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    val_confirm_password: {
-                        required: true,
-                        minlength: 5,
-                        equalTo: '#val_password'
-                    },
-                    val_email: {
-                        required: true,
-                        email: true
+    
+                    turnout: {
+                    required: false,
+                    number: false
                     },
                     val_terms: {
                         required: true
