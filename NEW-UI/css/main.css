@@ -3467,4 +3467,30 @@ p, .table, .alert, .carousel {
         right: 70px;
         margin-right: 0;
     }
+    
+    /*Checkboxes */
+    fieldset.group  { 
+      margin: 0; 
+      padding: 0; 
+      margin-bottom: 1.25em; 
+      padding: .125em; 
+    } 
+    
+    ul.checkbox  { 
+      margin: 0; 
+      padding: 0; 
+      margin-left: 20px; 
+      list-style: none; 
+    } 
+    
+    ul.checkbox li input { 
+      margin-right: .25em; 
+    } 
+    
+    ul.checkbox li { 
+      border: 1px transparent solid; 
+      display:inline-block;
+      width:11em;
+    } 
+    
 }
