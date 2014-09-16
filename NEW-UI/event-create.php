@@ -63,7 +63,7 @@ include 'inc/dbconfig.php';
                     <div class="form-group">
                         <label class="col-md-3 control-label">Event Date</label>
                         <div class="col-md-9">
-                            <div class="input-group input-daterange" data-date-format="mm/dd/yyyy">
+                            <div class="input-group input-daterange" data-date-format="dd M yyyy">
                                 <input type="text" id="start_date" name="start_date" class="form-control" placeholder="From">
                                 <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
                                 <input type="text" id="end_date" name="end_date" class="form-control" placeholder="To">

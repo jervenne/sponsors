@@ -168,7 +168,7 @@ error_reporting(E_ALL | E_STRICT);
                         <h3 class="widget-heading"><strong><?=$row['event_name']?></strong></h3>
                     </div>
                     <div class="g-row">
-                        <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
+                        <h5 class="widget-heading"><em>by <?=$row['organizer']?></em></h5>
                     </div>
                     <div class="g-row event-desc">
                         <h4 class="widget-heading"><?=$row['description']?></h4>
