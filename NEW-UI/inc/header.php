@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Create an event!</title>
+    <title>Eventory</title>
 
     <meta name="description" content="AppUI is a Bootstrap Admin Web App Template created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">

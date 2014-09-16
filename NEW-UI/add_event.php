@@ -59,7 +59,7 @@ if(isset($_POST["target_audience"])) //checks if target audience is selected
 }
 
 if ($result){
-	header("Location: event-listings.html");
+	header("Location: event-listings.php");
 	//echo '<script>location.replace("event_listings.php?success=1);</script>';
 }
 else{

@@ -944,7 +944,8 @@ a.widget-content:active {
 }
 
 .widget-image.widget-image-sm {
-    height: 270px;
+    /*height: 270px;*/
+    height: 100%;
 }
 
 .widget-image.widget-image-xs {
@@ -3492,5 +3493,5 @@ p, .table, .alert, .carousel {
       display:inline-block;
       width:11em;
     } 
-    
+  
 }
