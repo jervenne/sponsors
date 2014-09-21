@@ -197,43 +197,19 @@
             <!-- END Wrapper for scrolling functionality -->
         </div>
         <!-- END Alternative Sidebar -->
-        <div id="sidebar">
-            <!-- Sidebar Brand -->
-            <div id="sidebar-brand" class="themed-background">
-                <a href="index.html" class="sidebar-title">
-                    <i class="gi gi-magic"></i> <span class="sidebar-nav-mini-hide">EVENTORY</span>
-                </a>
-            </div>
-            <!-- END Sidebar Brand -->
-
-            
-        </div>
+     
 
         <!-- Main Container -->
         <div id="main-container" style="margin:0px">
             <!-- Header -->
-            <!-- In the PHP version you can set the following options from inc/config file -->
-            <!--
-                Available header.navbar classes:
-
-                'navbar-default'            for the default light header
-                'navbar-inverse'            for an alternative dark header
-
-                'navbar-fixed-top'          for a top fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar())
-                    'header-fixed-top'      has to be added on #page-container only if the class 'navbar-fixed-top' was added
-
-                'navbar-fixed-bottom'       for a bottom fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
-                    'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
-                -->
+            
                 <header class="navbar navbar-inverse navbar-fixed-top">
                     <!-- Left Header Navigation -->
                     <ul class="nav navbar-nav-custom">
+                        <div class="sidebar-title hidden-xs animation-fadeInQuick">
+                           <i class="gi gi-magic"></i><a href="event-create.php">EVENTORY</a> 
+                        </div>
 
-
-                        <!-- Header Link -->
-                        <li class="hidden-xs animation-fadeInQuick">
-                            <a href="event-listings.html"><strong>Events Listings</strong></a>
-                        </li>
                         <!-- END Header Link -->
                     </ul>
                     <!-- END Left Header Navigation -->

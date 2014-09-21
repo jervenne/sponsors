@@ -19,8 +19,8 @@ include 'inc/dbconfig.php';
 
                 <!-- Clickable Wizard Content -->
                 <form id="clickable-wizard" action="add_event.php" method="post" class="form-horizontal form-bordered" enctype="multipart/form-data" >
-                 <!-- First Step -->
-                 <div id="clickable-first" class="step">
+                   <!-- First Step -->
+                   <div id="clickable-first" class="step">
                     <!-- Step Info -->
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -48,7 +48,7 @@ include 'inc/dbconfig.php';
                     </div>
                     <!-- END Step Info -->
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Title</label>
+                        <label class="col-md-3 control-label">Title<span class="text-danger">*</span></label>
                         <div class="col-md-9">
                             <input type="text" id="title" name="title" class="form-control" placeholder="Your event title">
                         </div>
@@ -74,9 +74,9 @@ include 'inc/dbconfig.php';
                         <label class="col-md-3 control-label">Start Time</label>
                         <div class="col-md-9">
                             <div class="input-group bootstrap-timepicker">
-                                <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center" placeholder="From">
+                                <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center">
                                 <span class="input-group-btn">
-                                    <a href="javascript:void(0)" class="btn btn-default"><i class="fa fa-clock-o"></i></a>
+                                    <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -84,14 +84,14 @@ include 'inc/dbconfig.php';
                             <label class="col-md-3 control-label">End Time</label>
                             <div class="col-md-9">
                                 <div class="input-group bootstrap-timepicker">
-                                    <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center" placeholder="From">
+                                    <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center">
                                     <span class="input-group-btn">
-                                        <a href="javascript:void(0)" class="btn btn-default"><i class="fa fa-clock-o"></i></a>
+                                        <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-3 control-label">Your Event Type</label>
+                                <label class="col-md-3 control-label">Your Event Type<span class="text-danger">*</span> <br><small>(max 3)</small></label>
                                 <div class="col-md-9">
                                     <fieldset class="group"> 
                                         <ul class="checkbox">
@@ -102,7 +102,7 @@ include 'inc/dbconfig.php';
 
                                             while ($row = mysql_fetch_array($result)) { ?>
 
-                                            <li><input type="checkbox" id="event_type" name="event_types[]" value="<?=$row['id']?>"> <?=$row['type']?></li>
+                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$row['id']?>"> <?=$row['type']?></li>
 
                                             <?
                                         }
@@ -112,21 +112,23 @@ include 'inc/dbconfig.php';
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Target Audience</label>
+                            <label class="col-md-3 control-label">Target Audience<span class="text-danger">*</span> <br><small>(max 3)</small></label>
                             <div class="col-md-9">
                                 <fieldset class="group"> 
                                     <ul class="checkbox">
-                                        <?php
+                                        <div data-toggle="checkboxes" data-max="1">
+                                            <?php
 
-                                        $sql = "SELECT * FROM target_audience";
-                                        $result = mysql_query($sql);
-                                        while ($row = mysql_fetch_array($result)) { ?>
-                                        
-                                        <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$row['id']?>"> <?=$row['type']?></li>
+                                            $sql = "SELECT * FROM target_audience";
+                                            $result = mysql_query($sql);
+                                            while ($row = mysql_fetch_array($result)) { ?>
 
-                                        <?
-                                    }
-                                    ?>
+                                            <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$row['id']?>"> <?=$row['type']?></li>
+
+                                            <?
+                                        }
+                                        ?>
+                                    </div>
                                 </ul>
                             </fieldset>
                         </div>
@@ -155,7 +157,7 @@ include 'inc/dbconfig.php';
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Estimated Turnout *</label>
+                        <label class="col-md-3 control-label">Estimated Turnout <span class="text-danger">*</span></label>
                         <div class="col-md-9">
                             <div class="input-group">
                                 <input type="text" id="turnout" name="turnout" class="form-control">
@@ -164,9 +166,19 @@ include 'inc/dbconfig.php';
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Event Details</label>
+                        <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                         <div class="col-md-9">
-                            <textarea id="description" name="description" rows="6" class="form-control textarea-elastic ui-wizard-content" placeholder="Tell us more about your event!" style="overflow: hidden; height: 136px;"></textarea>
+                            <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <textarea id="description" name="description" rows="10" class="form-control textarea-editor" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Organization Name<span class="text-danger">*</span></label>
+                        <div class="col-md-9">
+                            <input type="text" id="org_name" name="org_name" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -259,7 +271,8 @@ include 'inc/dbconfig.php';
 <!-- END Page Wrapper -->
 
 <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file (Remove 'http:' if you have SSL) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/vendor/jquery-2.1.1.min.js"></script>
+<script src="js/vendor/jquery.checkboxes-1.0.5.min.js"></script>
 <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
 
 <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
@@ -281,7 +294,6 @@ include 'inc/dbconfig.php';
 <script>$(function(){ FormsComponents.init(); });</script>
 
 <script type="text/javascript">
-//<![CDATA[ 
 $(window).load(function(){
     $("#switch").click(function () {
         if ($(this).prop('checked') === true) {
@@ -315,7 +327,9 @@ $(window).load(function(){
             $('#instagram_title').hide();
             $('input[name=instagram_title]').prop('required',false);  
             $('#website_title').hide();
-            $('input[name=website_title]').prop('required',false);                 
+            $('input[name=website_title]').prop('required',false);   
+            $('#website').hide();
+            $('input[name=website]').prop('required',false);                 
         }
     });
 $("#no_presence").click(function () {
@@ -326,6 +340,34 @@ $("#no_presence").click(function () {
         $('.presenceTable').show();
     } 
 });
+
+
+});//]]>  
+
+</script>
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
+
+    $("input[id=target_audience]").change(function(){
+        var max= 3;
+        if( $("input[id=target_audience]:checked").length == max ){
+            $("input[id=target_audience]").attr('disabled', 'disabled');
+            $("input[id=target_audience]:checked").removeAttr('disabled');
+        }else{
+           $("input[id=target_audience]").removeAttr('disabled');
+       }
+   })
+
+    $("input[id=event_types]").change(function(){
+        var max= 3;
+        if( $("input[id=event_types]:checked").length == max ){
+            $("input[id=event_types]").attr('disabled', 'disabled');
+            $("input[id=event_types]:checked").removeAttr('disabled');
+        }else{
+           $("input[id=event_types]").removeAttr('disabled');
+       }
+   })
+
 });//]]>  
 
 </script>

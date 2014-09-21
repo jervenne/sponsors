@@ -84,8 +84,8 @@ var App = function() {
         $('.input-tags').tagsInput({ width: 'auto', height: 'auto'});
 
         // Initialize Timepicker
-        $('.input-timepicker').timepicker({minuteStep: 1,showSeconds: true,showMeridian: true});
-        $('.input-timepicker24').timepicker({minuteStep: 1,showSeconds: true,showMeridian: false});
+        $('.input-timepicker').timepicker({minuteStep: 15,showSeconds: false, showInputs: false, showMeridian: true});
+        $('.input-timepicker24').timepicker({minuteStep: 1,showSeconds: true, showInputs: false, showMeridian: false});
 
         // Initialize Datepicker
         $('.input-datepicker, .input-daterange').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });

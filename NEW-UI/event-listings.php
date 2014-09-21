@@ -1,8 +1,6 @@
 <?php 
 include 'inc/header.php';  
 include 'inc/dbconfig.php';
-ini_set('display_errors', 'On');
-error_reporting(E_ALL | E_STRICT);
 ?>
 
 <!-- Page content -->
@@ -53,8 +51,8 @@ error_reporting(E_ALL | E_STRICT);
                     <div class="g-row">
                         <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
                     </div>
-                    <div class="g-row event-desc">
-                        <h4 class="widget-heading">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h4>
+                    <div class="g-row">
+                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
                     </div>
                     <div class="g-row">
                         <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
@@ -83,8 +81,8 @@ error_reporting(E_ALL | E_STRICT);
                     <div class="g-row">
                         <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
                     </div>
-                    <div class="g-row event-desc">
-                        <h4 class="widget-heading">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h4>
+                    <div class="g-row">
+                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
                     </div>
                     <div class="g-row">
                         <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
@@ -113,8 +111,8 @@ error_reporting(E_ALL | E_STRICT);
                     <div class="g-row">
                         <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
                     </div>
-                    <div class="g-row event-desc">
-                        <h4 class="widget-heading">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h4>
+                    <div class="g-row">
+                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
                     </div>
                     <div class="g-row">
                         <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
@@ -138,7 +136,7 @@ error_reporting(E_ALL | E_STRICT);
         ?>
         <div class="col-sm-4">
             <div class="gallery-image-container animation-fadeInQuick2" data-category="soon">
-                <a href="page_ready_article.html" class="widget">
+                <a href="event-details.php?id=<?=$event_id;?>" class="widget">
                     <div class="widget-content themed-background text-light-op grid-header">
                         <span class="pull-right"><i class="fa fa-users"></i><?=$row['turnout']?></span>
                         <i class="fa fa-fw fa-file-text"></i> <strong>
@@ -150,9 +148,9 @@ error_reporting(E_ALL | E_STRICT);
                         $str = '';
                         while ($row1 = mysql_fetch_array($result1)) {
 
-                            $str .= $row1['type'].",";
+                            $str .= $row1['type'].", ";
                         }
-                        $str = substr($str, 0, strlen($str) - 1);
+                        $str = substr($str, 0, strlen($str) - 2);
                         echo $str;
                         ?>
                     </strong>
@@ -170,8 +168,8 @@ error_reporting(E_ALL | E_STRICT);
                     <div class="g-row">
                         <h5 class="widget-heading"><em>by <?=$row['organizer']?></em></h5>
                     </div>
-                    <div class="g-row event-desc">
-                        <h4 class="widget-heading"><?=$row['description']?></h4>
+                    <div class="g-row">
+                        <h5 class="widget-heading event-desc"><?=$row['description']?></h5>
                     </div>
                     <div class="g-row">
                         <h6 class="widget-heading"><i class="fa fa-tags"></i> 
@@ -213,7 +211,7 @@ error_reporting(E_ALL | E_STRICT);
 <!-- END Page Wrapper -->
 
 <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file (Remove 'http:' if you have SSL) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/vendor/jquery-2.1.1.min.js"></script>
 <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
 
 <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
