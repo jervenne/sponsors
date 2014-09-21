@@ -3504,6 +3504,7 @@ p, .table, .alert, .carousel {
   		white-space: nowrap;
   		overflow: hidden;
   		text-overflow: ellipsis;
+  		max-height: 20px;
   	}
   	
   	.sidebar-title a{

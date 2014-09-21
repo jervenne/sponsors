@@ -6,8 +6,8 @@
 
     <title>Eventory</title>
 
-    <meta name="description" content="AppUI is a Bootstrap Admin Web App Template created by pixelcave and published on Themeforest">
-    <meta name="author" content="pixelcave">
+    <meta name="description" content="Find sponsors easier!">
+    <meta name="author" content="Eventory">
     <meta name="robots" content="noindex, nofollow">
 
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">

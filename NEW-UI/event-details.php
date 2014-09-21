@@ -33,7 +33,7 @@ $row = mysql_fetch_array($result);
                 </div>
             </br>
             <div class="clearfix">
-               <article class ="article-story">
+             <article class ="article-story">
                 <p>
                     <?=$row['description'];?>
                 </p>
@@ -58,10 +58,37 @@ $row = mysql_fetch_array($result);
 
         <br>
         <div class="widget">
-            <div class="widget-content widget-content-mini themed-background-dark text-light-op">
+            <div class="widget-content widget-content-mini themed-background-muted">
+                <i class="gi gi-group"></i>  <strong class="text-dark">Target Audience</strong>
+            </div>
+            <div class="widget-content">
+
+                <h4 class="widget-heading">
+
+                    <?
+
+            //get list of target audience
+                    $sql2 = "SELECT type FROM events_audience ea, target_audience ta WHERE ea.audience_id=ta.id AND event_id=".$event_id;
+                    $result2 = mysql_query($sql2);
+
+                    $str = '';
+                    while ($row2 = mysql_fetch_array($result2)) {
+
+                        $str .= ''.$row2['type']."<br/>";
+                    }
+                    $str = substr($str, 0, strlen($str) - 5);
+                    echo $str;
+                    ?>
+                </h4>
+
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="widget-content widget-content-mini themed-background-muted">
                 <i class="gi gi-calendar"></i> <strong>  Where & When</strong>
             </div>
-            <div class="widget-content themed-background-muted text-dark text-left">
+            <div class="widget-content text-dark text-left">
                 <p><?=$row['location'];?></p>
                 <?
                 if ($row['start_date'] == $row['end_date']){
@@ -86,18 +113,25 @@ $row = mysql_fetch_array($result);
                     <img src="img/placeholders/avatars/standchart.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
                     <h2 class="widget-heading h3 text-muted"><?=$row['organizer'];?></h2>
                 </div>
-                <div class="widget-content themed-background-muted text-dark text-center">
+                <div class="widget-content themed-background-muted text-dark text-left">
                     <?=$row['org_info'];?>
                 </div>
                 <div class="widget-content">
                     <div class="row text-center">
                         <a href="javascript:void(0)" class="col-xs-6">
-                            <h4 class="widget-heading"><i class="gi gi-share_alt text-success push-bit"></i> <br><small>About Organizer</small></h4>
+                            <h4 class="widget-heading"><i class="gi gi-nameplate_alt text-info push-bit"></i> <br><small>View Organizer</small></h4>
                         </a>
                         <a href="javascript:void(0)" class="col-xs-6">
-                            <h4 class="widget-heading"><i class="gi gi-briefcase text-info push-bit"></i> <br><small>Discuss with me!</small></h4>
+                            <h4 class="widget-heading"><i class="gi gi-pizza text-success push-bit"></i> <br><small>Discuss with me!</small></h4>
                         </a>
                     </div>
+                </div>
+
+                <div class ="widget-content">
+                    <div class="col-xs-3 social-links"><a href="<?=$row['facebook'];?>" data-toggle="tooltip" data-original-title="facebook page"><i class="fa fa-facebook-square"></i></a></div>
+                    <div class="col-xs-3 social-links"><a href="<?=$row['facebook_event'];?>" data-toggle="tooltip" data-original-title="facebook event page"><i class="fa fa-facebook"></i></a></div>
+                    <div class="col-xs-3 social-links"><a href="<?=$row['instagram'];?>" data-toggle="tooltip" data-original-title="instagram"><i class="fa fa-instagram"></i></a></div>
+                    <div class="col-xs-3 social-links"><a href="<?=$row['website'];?>" data-toggle="tooltip" data-original-title="website"><i class="gi gi-global"></i></a></div>
                 </div>
             </div>
             <!-- END Stats User Widget -->
@@ -122,26 +156,20 @@ $row = mysql_fetch_array($result);
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><strong>Logo Placement</strong></li></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emcee shoutout x1</strong></td>
+                    </tr>
                     <tr class="active">
                         <td>
-                            <h1>$<strong>9</strong><small>.99</small><br><small>per month</small></h1>
+                            <h2>$500<br><small>10 slots left</small></h2>
                         </td>
                     </tr>
-                    <tr>
-                        <td><strong>1</strong> Domain</td>
-                    </tr>
-                    <tr>
-                        <td><strong>1GB</strong> Storage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>10GB</strong> Bandwidth</td>
-                    </tr>
-                    <tr>
-                        <td><strong>1</strong> Databases</td>
-                    </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                     <tr>
@@ -160,26 +188,23 @@ $row = mysql_fetch_array($result);
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><strong>Logo Placement</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emcee shoutout x2</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong></strong></td>
+                    </tr>
                     <tr class="active">
                         <td>
-                            <h1>$<strong>19</strong><small>.99</small><br><small>per month</small></h1>
+                            <h1>$800<small></small><br><small>5 slots left</small></h1>
                         </td>
                     </tr>
-                    <tr>
-                        <td><strong>5</strong> Domains</td>
-                    </tr>
-                    <tr>
-                        <td><strong>10GB</strong> Storage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>1TB</strong> Bandwidth</td>
-                    </tr>
-                    <tr>
-                        <td><strong>10</strong> Databases</td>
-                    </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                     <tr>
@@ -198,26 +223,23 @@ $row = mysql_fetch_array($result);
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><strong>Logo Placement</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emcee shoutout every 3hr</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social media shoutout</strong></td>
+                    </tr>
                     <tr class="active">
                         <td>
-                            <h1>$<strong>39</strong><small>.99</small><br><small>per month</small></h1>
+                            <h1>$2000<small></small><br><small>5 slot left</small></h1>
                         </td>
                     </tr>
-                    <tr>
-                        <td><strong>10</strong> Domains</td>
-                    </tr>
-                    <tr>
-                        <td><strong>20GB</strong> Storage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>5TB</strong> Bandwidth</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30</strong> Databases</td>
-                    </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                     <tr>
@@ -236,26 +258,29 @@ $row = mysql_fetch_array($result);
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><strong>Logo Placement</strong> (extra big)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emcee shoutout every 1hr</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social media shoutout</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participants' likes for your page</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participants engagement with your brand</strong></td>
+                    </tr>
                     <tr class="active">
                         <td>
-                            <h1>$<strong>99</strong><small>.99</small><br><small>per month</small></h1>
+                            <h1>5000<small></small><br><small>1 slot left</small></h1>
                         </td>
                     </tr>
-                    <tr>
-                        <td><strong>Unlimited</strong> Domains</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Unlimited</strong> Storage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Unlimited</strong> Bandwidth</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Unlimited</strong> Databases</td>
-                    </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                     <tr>
@@ -283,18 +308,19 @@ $row = mysql_fetch_array($result);
             <table class="table table-pricing table-borderless">
                 <thead>
                     <tr>
-                        <th>Voice</th>
+                        <th>Emcee Shoutout</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <h1><strong>FREE</strong><br><small><i class="fa fa-gift"></i></small></h1>
+                            <h2>$100<br></h2>
+                            <h4>Our emcee will give a shoutout about your brand</h4>
                         </td>
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                 </tbody>
@@ -304,18 +330,19 @@ $row = mysql_fetch_array($result);
             <table class="table table-pricing table-borderless">
                 <thead>
                     <tr>
-                        <th>Banner</th>
+                        <th>Goodies</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <h1>$<strong>1</strong><small>.99</small><br><small>per month</small></h1>
+                            <h2>$200<br></h2>
+                            <h4>We'll pack distribute your products to our participants</h4>
                         </td>
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                 </tbody>
@@ -325,18 +352,19 @@ $row = mysql_fetch_array($result);
             <table class="table table-pricing table-borderless">
                 <thead>
                     <tr>
-                        <th>Large Pack</th>
+                        <th>Banner Placement</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <h1>$<strong>2</strong><small>.99</small><br><small>per month</small></h1>
+                            <h2>$1000<br></h2>
+                            <h4>Your brand logo will be on our mega event banner</h4>
                         </td>
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                 </tbody>
@@ -346,18 +374,19 @@ $row = mysql_fetch_array($result);
             <table class="table table-pricing table-borderless">
                 <thead>
                     <tr>
-                        <th>Ultimate Pack</th>
+                        <th>Participants Engagement</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <h1>$<strong>3</strong><small>.99</small><br><small>per month</small></h1>
+                            <h2>$2000<br></h2>
+                            <h4>We'll have our partipants to come to your store and to learn more about your brand.</h4>
                         </td>
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Sign Up Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
                         </td>
                     </tr>
                 </tbody>
@@ -394,9 +423,9 @@ $(window).load(function(){
             $("input[id=target_audience]").attr('disabled', 'disabled');
             $("input[id=target_audience]:checked").removeAttr('disabled');
         }else{
-         $("input[id=target_audience]").removeAttr('disabled');
-     }
- })
+           $("input[id=target_audience]").removeAttr('disabled');
+       }
+   })
 
 });//]]>  
 
