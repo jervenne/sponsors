@@ -31,98 +31,6 @@ include 'inc/dbconfig.php';
 
 <!-- Gallery Items -->
 <div class="row gallery">
-    <div class="col-sm-4">
-        <div class="gallery-image-container animation-fadeInQuick2" data-category="new">
-            <a href="page_ready_article.html" class="widget">
-                <div class="widget-content themed-background text-light-op grid-header">
-                    <span class="pull-right"><i class="fa fa-users"></i>20000</span>
-                    <i class="fa fa-fw fa-file-text"></i> <strong>Concert</strong>
-                </div>
-                <div class="widget-image widget-image-sm">
-                    <img src="img/placeholders/photos/photo19.jpg" alt="image">
-                    <div class="widget-image-content">
-                    </div>
-                </div>
-                <div class="widget-content text-dark">
-                    <div class="g-row">
-                        <span class="pull-right">14 Oct 2014</span>
-                        <h3 class="widget-heading"><strong>Big Shot Workshop</strong></h3>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
-                    </div>
-                    <div class="g-row">
-                        <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="gallery-image-container animation-fadeInQuick2" data-category="popular">
-            <a href="page_ready_article.html" class="widget">
-                <div class="widget-content themed-background text-light-op grid-header">
-                    <span class="pull-right"><i class="fa fa-users"></i>20000</span>
-                    <i class="fa fa-fw fa-file-text"></i> <strong>Concert</strong>
-                </div>
-                <div class="widget-image widget-image-sm">
-                    <img src="img/placeholders/photos/photo19.jpg" alt="image">
-                    <div class="widget-image-content">
-                    </div>
-                </div>
-                <div class="widget-content text-dark">
-                    <div class="g-row">
-                        <span class="pull-right">14 Oct 2014</span>
-                        <h3 class="widget-heading"><strong>Big Shot Workshop</strong></h3>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
-                    </div>
-                    <div class="g-row">
-                        <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="gallery-image-container animation-fadeInQuick2" data-category="soon">
-            <a href="page_ready_article.html" class="widget">
-                <div class="widget-content themed-background text-light-op grid-header">
-                    <span class="pull-right"><i class="fa fa-users"></i>20000</span>
-                    <i class="fa fa-fw fa-file-text"></i> <strong>Concert</strong>
-                </div>
-                <div class="widget-image widget-image-sm">
-                    <img src="img/placeholders/photos/photo19.jpg" alt="image">
-                    <div class="widget-image-content">
-                    </div>
-                </div>
-                <div class="widget-content text-dark">
-                    <div class="g-row">
-                        <span class="pull-right">14 Oct 2014</span>
-                        <h3 class="widget-heading"><strong>Big Shot Workshop</strong></h3>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading"><em>by Standard Chartered</em></h5>
-                    </div>
-                    <div class="g-row">
-                        <h5 class="widget-heading event-desc">Wanna be a bigshot? You have to attend this. Fun games and informative session!Wanna be a bigshot? You have to attend this. Fun games and informative session!</h5>
-                    </div>
-                    <div class="g-row">
-                        <h6 class="widget-heading"><i class="fa fa-tags"></i> <span class="label label-default">Young Professionals</span>, <span class="label label-default">General Crowd</span>, <span class="label label-default">Seniors</span></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!--start-->
-    
     <?php
 
     $sql = "SELECT * FROM event";
@@ -135,7 +43,7 @@ include 'inc/dbconfig.php';
 
         ?>
         <div class="col-sm-4">
-            <div class="gallery-image-container animation-fadeInQuick2" data-category="soon">
+            <div class="gallery-image-container animation-fadeInQuick2" data-category="new">
                 <a href="event-details.php?id=<?=$event_id;?>" class="widget">
                     <div class="widget-content themed-background text-light-op grid-header">
                         <span class="pull-right"><i class="fa fa-users"></i><?=$row['turnout']?></span>
@@ -156,7 +64,7 @@ include 'inc/dbconfig.php';
                     </strong>
                 </div>
                 <div class="widget-image widget-image-sm">
-                    <img src="<?=$row['logo']?>" alt="image">
+                    <img src="<?=$row['banner']?>" alt="image">
                     <div class="widget-image-content">
                     </div>
                 </div>

@@ -10,9 +10,9 @@ $start_time = $_POST['start_time'];
 $end_time = $_POST['end_time'];
 $turnout = $_POST['turnout'];
 $target_audience = $POST['target_audience'];
-$description = $_POST['description'];
+$description = mysql_real_escape_string($_POST['description']);
 $org_name = $_POST['org_name'];
-$orgInfo = $_POST['orgInfo'];
+$orgInfo = mysql_real_escape_string($_POST['orgInfo']);
 $facebook = $_POST['facebook'];
 $facebook_event = $_POST['facebook_event'];
 $twitter = $_POST['twitter'];
@@ -20,25 +20,37 @@ $instagram = $_POST['instagram'];
 $website = $_POST['website'];
 
 //file paths
-$filename = $_FILES["logo"]['name']; //file name
-$path ="";
-if ($filename){
-    $path = 'img/logos/'.$filename; //generate the destination path
+$banner= $_FILES["banner"]['name']; //file name
+$logo= $_FILES["logo"]['name'];
+
+$banner_path ="";
+$logo_path ="";
+if ($banner){
+    $banner_path = 'img/banners/'.$banner; //generate the destination path
 
     //move photos to folder
-    if(move_uploaded_file($_FILES['logo']['tmp_name'],$path)) {
+    if(move_uploaded_file($_FILES['banner']['tmp_name'],$banner_path)) {
     }
 
-//if no logo, replace with a placeholder
+//if no banner, replace with a placeholder
 } else{
     //default picture placeholder
-    $path = 'img/placeholders/photos/photo18@2x.jpg';
+    $banner_path = 'img/placeholders/photos/photo18@2x.jpg';
 }
 
+if ($logo){
+    $logo_path = 'img/logos/'.$logo; //generate the destination path
+
+    //move photos to folder
+    if(move_uploaded_file($_FILES['logo']['tmp_name'],$logo_path)) {
+    }
+
+//if no banner, replace with a placeholder
+} 
 
 
-$sql = "INSERT INTO event (event_name,location, start_date, end_date, start_time, end_time, turnout, logo, description, org_info, facebook, facebook_event, twitter, instagram, website, organizer) 
-VALUES ('$title', '$location', '$start_date', '$end_date', '$start_time', '$end_time', '$turnout', '$path', '$description', '$orgInfo', '$facebook', '$facebook_event', '$twitter', '$instagram', '$website','$org_name')";
+$sql = "INSERT INTO event (event_name,location, start_date, end_date, start_time, end_time, turnout, banner, description, org_info, facebook, facebook_event, twitter, instagram, website, organizer, org_logo) 
+VALUES ('$title', '$location', '$start_date', '$end_date', '$start_time', '$end_time', '$turnout', '$banner_path', '$description', '$orgInfo', '$facebook', '$facebook_event', '$twitter', '$instagram', '$website','$org_name', '$logo_path')";
 
 $result = mysql_query($sql) or die(mysql_error());
 

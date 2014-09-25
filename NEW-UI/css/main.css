@@ -3537,4 +3537,9 @@ p, .table, .alert, .carousel {
   		padding: 0px 0px 5px 0px !important;
   		
   	}
+  	
+  	article.article-story {
+  	max-width: 100%;
+  	overflow-wrap: break-word;
+  	}
 }

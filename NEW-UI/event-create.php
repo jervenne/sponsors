@@ -150,9 +150,9 @@ include 'inc/dbconfig.php';
                     </div>
                     <!-- END Step Info -->
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Logo</label>
+                        <label class="col-md-3 control-label">Event Banner</label>
                         <div class="col-md-9">
-                            <input type="File" id="logo" name="logo" class="form-control" placeholder="Upload your logo here">
+                            <input type="File" id="banner" name="banner" class="form-control">
                         </div>
                     </div>
 
@@ -179,6 +179,12 @@ include 'inc/dbconfig.php';
                         <label class="col-md-3 control-label">Organization Name<span class="text-danger">*</span></label>
                         <div class="col-md-9">
                             <input type="text" id="org_name" name="org_name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Org Logo</label>
+                        <div class="col-md-9">
+                            <input type="File" id="logo" name="logo" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
